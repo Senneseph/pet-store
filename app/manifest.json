@@ -1,0 +1,20 @@
+{
+  "name": "Pet Store — WebAX",
+  "short_name": "PetStore",
+  "description": "A WebAX reference app: OpenAPI spec → jcule → jellicule.",
+  "start_url": "/pet-store/app/index.html",
+  "scope": "/pet-store/app/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b6bcb",
+  "webax": {
+    "package_id": "pet-store",
+    "version": "0.1.0",
+    "publisher": "local",
+    "permissions": ["storage", "network"],
+    "provides": [{ "intent": "share", "type": "image", "formats": ["image/*"] }],
+    "requires": [],
+    "services": [],
+    "distribution": {}
+  }
+}

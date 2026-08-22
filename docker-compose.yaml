@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: app/environment/Dockerfile
+    ports:
+      - "${APP_PORT:-3004}:80"
+    volumes:
+      # Serve the meta-project root so the demo's relative imports
+      # (../../jcule/dist, ../../jellicule/dist) resolve.
+      - ..:/usr/share/nginx/html:ro
+    restart: unless-stopped

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b6bcb" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>Pet Store — a WebAX app</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #1f2328; }
+      h2 { margin-bottom: 0.5rem; }
+      jel-list li { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0; }
+      jel-button { margin: 0.25rem; }
+    </style>
+  </head>
+  <body>
+    <h1>🐾 Pet Store</h1>
+    <p>A WebAX application: OpenAPI spec → jcule (BLC) → jellicule components.</p>
+    <div id="app"></div>
+    <script type="module" src="./main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js');
+      }
+    </script>
+  </body>
+</html>

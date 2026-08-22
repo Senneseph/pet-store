@@ -1,0 +1,10 @@
+{
+  "states": ["available", "pending", "sold"],
+  "initial": "available",
+  "transitions": [
+    { "from": "available", "to": "pending", "on": "adopt" },
+    { "from": "available", "to": "sold", "on": "buy" },
+    { "from": "pending", "to": "sold", "on": "complete" },
+    { "from": "pending", "to": "available", "on": "cancel" }
+  ]
+}
